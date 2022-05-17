@@ -1,5 +1,6 @@
 import './Nav.css'
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 export default props =>
 <aside className="menu-area">
@@ -7,14 +8,14 @@ export default props =>
    {/* <a href="#/">
        <i className="fa fa-home"></i>Início
 </a>*/}
-    <a href="#/">
+     <Link to="#/">
         <i className='fa fa-home'> Início</i>
-    </a>
-    <a href="#/users">
+    </Link>
+    <Link to="/users">
         <i className='fa fa-users'> Usuarios</i>
-    </a>
-    <a href='#/'>
+    </Link>
+    <Link to='https://github.com/samuelbatista3rios?tab=repositories'>
         <i className='fa fa-github'> Sobre Mim</i>
-    </a>
+    </Link>
     </nav>
 </aside>
