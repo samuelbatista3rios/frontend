@@ -8,7 +8,7 @@ export default props =>
    {/* <a href="#/">
        <i className="fa fa-home"></i>Início
 </a>*/}
-     <Link to="#/">
+     <Link to="/">
         <i className='fa fa-home'> Início</i>
     </Link>
     <Link to="/users">

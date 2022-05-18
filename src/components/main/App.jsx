@@ -9,12 +9,13 @@ import Nav from "../template/Nav";
 import Routes from './Routes'
 import Footer from "../template/Footer";
 
-export default (props) => 
-<BrowserRouter>
-<div className="app">
-    <Logo />
-    <Nav />
-    <Routes/>
-    <Footer />
-  </div>
+export default (props) => (
+  <BrowserRouter>
+    <div className="app">
+      <Logo />
+      <Nav />
+      <Routes />
+      <Footer />
+    </div>
   </BrowserRouter>
+);
