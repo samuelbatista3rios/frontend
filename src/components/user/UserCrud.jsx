@@ -12,7 +12,8 @@ const baseUrl = 'http://localhost:3001/users'
 const initialState ={
     user:{ 
       name:'',
-     email: ''
+     email: '',
+     date:''
     },
     list:[]
 }
@@ -62,21 +63,34 @@ export default class UserCrud extends Component {
                                name="name"
                                value={this.state.user.name}
                                onChange={(e) => this.updateField(e)}
-                               placeholder="Digite o nome..."
+                               placeholder="Digite o Nome..."
                              />
                            </div>
                          </div>
 
                          <div className="col-12 col-md-6">
                            <div className="form-group">
-                             <label>E-mail</label>
+                             <label>Email</label>
                              <input
-                               type="text"
+                               type="email"
                                className="form-control"
                                name="email"
                                value={this.state.user.email}
                                onChange={(e) => this.updateField(e)}
-                               placeholder="Digite o e-mail"
+                               placeholder="Digite o E-mail"
+                             />
+                           </div>
+                         </div>
+                         <div className="col-12 col-md-6">
+                           <div className="form-group">
+                             <label>Data De Nascimento</label>
+                             <input
+                               type="date"
+                               className="form-control"
+                               name="date"
+                               value={this.state.user.date}
+                               onChange={(e) => this.updateField(e)}
+                               placeholder="Digite a Data de Nascimento"
                              />
                            </div>
                          </div>
@@ -119,7 +133,8 @@ export default class UserCrud extends Component {
                          <tr>
                          <th>Id</th>
                            <th>Nome</th>
-                           <th>E-mail</th>
+                           <th>Email</th>
+                           <th>Data de Nascimento</th>
                            <th>Ações</th>
                          </tr>
                        </thead>
@@ -136,6 +151,7 @@ export default class UserCrud extends Component {
                          <td>{user.id}</td>
                          <td>{user.name}</td>
                          <td>{user.email}</td>
+                         <td>{user.date}</td>
                          <td>
                            <button className="btn btn-warning"
                            onClick={()=> this.load(user)}>
