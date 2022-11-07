@@ -8,7 +8,7 @@ const headerProps ={
     subtitle: 'Cadastro de Usúarios: Incluir, Listar, Alterar e Excluir '
 }
 
-const baseUrl = process.env.REACT_APP_API_URL
+const baseUrl = 'https://crud-backend-exemple.herokuapp.com/users'
 const initialState ={
     user:{ 
       name:'',
